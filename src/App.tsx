@@ -29,7 +29,6 @@ const IdGenerator = ({ formData, schema: { title, description }, name, onChange 
   );
 };
 
-
 const schema: RJSFSchema = {
   "type": "object",
   "properties": {
@@ -70,7 +69,7 @@ function App() {
   return (
     <div className="App">
       <p>
-        Custom field `onChange` breaks "array" type in an schema
+        Custom field `onChange` breaks Form
       </p>
       <div className="form">
         <Form
