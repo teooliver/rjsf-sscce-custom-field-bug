@@ -15,9 +15,9 @@ const IdGenerator = ({ formData, schema: { title, description }, name, onChange 
     } else {
       const id = nanoid();
       setVal(id);
-      // If you remove this onChange call we can add items the array, 
-      // otherwise it flickers a new item and removes it.
-      onChange(id); 
+      // If you remove the onChange call we can add items to the array as expected, 
+      // otherwise it flickers the new item in and out.
+      // onChange(id); 
     }
   }, [formData, onChange]);
 
