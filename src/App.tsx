@@ -17,7 +17,13 @@ const IdGenerator = ({ formData, schema: { title, description }, name, onChange 
       setVal(id);
       // If you remove the onChange call we can add items to the array as expected, 
       // otherwise it flickers the new item in and out.
-      // onChange(id); 
+      // onChange(id);
+      // Test1 following this recommendation:
+      // https://github.com/rjsf-team/react-jsonschema-form/issues/3682#issuecomment-1554541155
+      setTimeout(() => {
+        onChange(id);
+      }, 10);
+
     }
   }, [formData, onChange]);
 
